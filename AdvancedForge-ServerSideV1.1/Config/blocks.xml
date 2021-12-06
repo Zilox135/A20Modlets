@@ -1,0 +1,57 @@
+<configs>
+	
+<append xpath="/blocks">
+
+<block name="Advancedforge">
+	<property name="Class" value="Forge"/>
+	<property name="UnlockedBy" value="perkAdvancedEngineering,AdvancedforgeSchematic"/>
+	<property name="CustomIcon" value="forge"/>
+	<property name="CustomIconTint" value="#0000FF"/>
+	<property name="Material" value="Mstone_scrap"/>
+	<property name="MaxDamage" value="5000"/>
+	<property name="StabilitySupport" value="true"/>
+	<property name="ModelOffset" value="0,0.5,0"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Path" value="solid"/>
+	<property name="Model" value="Entities/Crafting/forgePrefab"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="ParticleName" value="forge"/>
+	<property name="ParticleOffset" value="0.5,0,0.5"/>	
+	<property name="Stacknumber" value="10"/>
+	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE(5)"/>	
+
+	<property class="Workstation">
+		<property name="CraftingAreaRecipes" value="forge"/>
+		<property name="Modules" value="tools,output,material_input"/>
+		<property name="InputMaterials" value="iron,brass,lead,glass,stone,clay"/>
+	</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_forge"/>
+	<property name="OpenSound" value="forge_open"/>
+	<property name="CloseSound" value="forge_close"/>
+	<property name="CraftSound" value="forge_smelt_click"/>
+	<property name="CraftCompleteSound" value="forge_item_complete"/>
+	<property name="WorkstationJournalTip" value="forgeTip"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedSteel" value="1"/>
+	</property>
+	<drop event="Harvest" name="resourceForgedSteel" count="10" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceForgedIron" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="5" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceElectricParts" count="10" tag="allHarvest"/>	
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
+	<property name="TakeDelay" value="5"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="DescriptionKey" value="AdvancedforgeDesc"/>
+	<property name="EconomicValue" value="8000"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="70i0"/>
+</block>
+
+</append>
+</configs>

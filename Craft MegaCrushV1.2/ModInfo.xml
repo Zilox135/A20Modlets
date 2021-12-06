@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Craft MegaCrush" />
+		<Description value="Adds a recipe to craft MegaCrush" />
+		<Author value="Zilox" />
+		<Version value="1.2" />
+	</ModInfo>
+</xml>

@@ -1,0 +1,9 @@
+<configs>
+	
+	<insertAfter xpath="/progression/perks/perk[@name='perkPhysician']/effect_group/passive_effect[@name='RecipeTagUnlocked']">
+		<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,4" value="1" tags="medicalAdvancedFirstAidBandage"/>
+	</insertAfter>	
+	
+	<append xpath="/progression/perks/perk[@name='perkPhysician']/effect_group/passive_effect[@level='3,4']/@tags">,medicalAdvancedFirstAidKit</append>
+	
+</configs>

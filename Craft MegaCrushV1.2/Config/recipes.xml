@@ -1,0 +1,13 @@
+<Zilox>
+	<append xpath="/recipes">
+
+<recipe name="drinkCanMegaCrush" count="1" craft_time="20" craft_area="campfire" tags="learnable,perkMasterChef" craft_tool="toolCookingPot" >		
+	<ingredient name="drugSteroids" count="1"/>
+	<ingredient name="foodRottingFlesh" count="5"/>
+	<ingredient name="drugVitamins" count="1"/>
+	<ingredient name="foodCropBlueberries" count="5"/>
+	<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
+</recipe>
+
+	</append>
+</Zilox>

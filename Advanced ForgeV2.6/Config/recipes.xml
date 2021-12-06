@@ -1,0 +1,13 @@
+<configs>
+	
+<append xpath="/recipes">
+
+<recipe name="Advancedforge" count="1" craft_time="300" craft_area="workbench" tags="workbenchCrafting,perkAdvancedEngineering,learnable">
+	<ingredient name="resourceForgedSteel" count="50"/>
+	<ingredient name="resourceMechanicalParts" count="20"/>
+	<ingredient name="resourceMetalPipe" count="10"/>
+	<ingredient name="carBattery" count="1"/>	
+</recipe>
+
+</append>
+</configs>

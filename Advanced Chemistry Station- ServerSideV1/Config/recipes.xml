@@ -1,0 +1,13 @@
+<Configs>
+<append xpath="/recipes">
+
+<recipe name="AdvancedchemistryStation" count="1" craft_time="300" craft_area="workbench" tags="workbenchCrafting,perkPhysician,learnable">
+	<ingredient name="toolBeaker" count="1"/>
+	<ingredient name="resourceForgedIron" count="200"/>
+	<ingredient name="resourceMetalPipe" count="30"/>
+	<ingredient name="resourceAcid" count="10"/>
+	<ingredient name="carBattery" count="1"/>	
+</recipe>
+
+</append>
+</Configs>

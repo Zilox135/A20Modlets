@@ -1,0 +1,7 @@
+<Configs>
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='schematicsToolsRare']">
+	<item name="AdvancedforgeSchematic" count="1"/>
+</append>
+
+</Configs>

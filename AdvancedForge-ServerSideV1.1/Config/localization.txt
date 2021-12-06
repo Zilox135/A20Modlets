@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context
+
+Advancedforge,blocks,Workstation,,,Advanced Forge,,
+AdvancedforgeSchematic,blocks,Workstation,,,Advanced Forge Schematic,,
+AdvancedforgeDesc,blocks,Workstation,,,The Advanced Forge is an industrial version of the regular forge. It does not require any fuel and does not attract screamers.,,"
+perkAdvancedEngineeringRank4LongDesc,progression,perk Int,,,"Learn to craft the Advanced Forge, shotgun turrets for short range concentrated base defense, battery banks and nail guns. Gain 35% XP from electrical trap kills.\nAll forge recipes cost 15% less, crafting Forged Steel and electrical devices costs 25% less."

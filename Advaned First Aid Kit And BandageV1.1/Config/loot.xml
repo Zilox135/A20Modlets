@@ -1,0 +1,21 @@
+<config>
+
+	<append xpath="/lootcontainers/lootgroup[@name='groupMedicalRare']">
+	    <item name="medicalAdvancedFirstAidKit" loot_prob_template="veryLow"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='survivalMedical']">
+		<item name="medicalAdvancedFirstAidBandage"/>
+	</append>
+	
+	<append xpath="/lootcontainers/lootgroup[@name='groupMedicalUncommon']">
+		<item name="medicalAdvancedFirstAidBandage" loot_prob_template="low"/>
+	</append>	
+	
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsAndGeneralT2']">
+		<item name="medicalAdvancedFirstAidBandageSchematic"/>
+		<item name="medicalAdvancedFirstAidKitSchematic"/>
+	</append>
+ 
+</config>
+

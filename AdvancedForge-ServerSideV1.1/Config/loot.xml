@@ -1,0 +1,12 @@
+<config>
+
+<append xpath="/lootcontainers/lootgroup[@name='schematicsToolsT2']">
+	<item name="AdvancedforgeSchematic"/>
+</append>
+	
+<append xpath="/lootcontainers/lootgroup[@name='schematicsToolsT1']">
+	<item name="AdvancedforgeSchematic" prob="0.1"/>
+</append>
+ 
+</config>
+

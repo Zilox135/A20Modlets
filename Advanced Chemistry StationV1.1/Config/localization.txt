@@ -1,0 +1,6 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context
+
+AdvancedchemistryStation,blocks,Workstation,,,Advanced Chemistry Station,,
+AdvancedchemistryStationSchematic,blocks,Workstation,,,Advanced Chemistry Station Schematic,,
+AdvancedchemistryStationDesc,blocks,Workstation,,,The Advanced Chemistry Station is an upgraded version of the regular Chemistry Station. It does not require any fuel and does not attract screamers.,,"
+perkPhysicianRank3LongDesc,progression,perk Int,,,"Craft the Advanced Chemistry Station. Medical healing items heal 55% more health over time. Gain 80% more XP using bandages, first aid bandages, first aid kits and splints. Can craft first aid kits and steroids.",,"

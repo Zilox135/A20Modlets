@@ -1,0 +1,9 @@
+<Configs>
+<append xpath="/lootcontainers/lootgroup[@name='schematicsToolsT2']">
+	<item name="AdvancedchemistryStationSchematic"/>	
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='schematicsToolsT1']">
+	<item name="AdvancedchemistryStationSchematic" prob="0.1"/>
+</append>
+</Configs>

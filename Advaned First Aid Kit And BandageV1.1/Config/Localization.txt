@@ -1,0 +1,9 @@
+Key,Source,Context,Changes,English
+
+medicalAdvancedFirstAidBandage,items,,,Advanced First Aid Bandage
+medicalAdvancedFirstAidBandageSchematic,items,,,Advanced First Aid Bandage Schematic
+medicalAdvancedFirstAidKit,items,,,Advanced First Aid Kit
+medicalAdvancedFirstAidKitSchematic,items,,,Advanced First Aid Kit Schematic
+perkPhysicianRank2LongDesc,progression,Perk,New,"Medical healing items heal 40% more health over time. Gain 60% more XP using bandages, first aid bandages, first aid kits and splints. Craft advanced first aid bandages, items craft 20% faster at the chemistry stations.",,
+perkPhysicianRank3LongDesc,progression,Perk,New,"Medical healing items heal 55% more health over time. Gain 80% more XP using bandages, first aid bandages, first aid kits and splints. Can craft first aid kits, advanced first aid kits, and steroids.",,
+

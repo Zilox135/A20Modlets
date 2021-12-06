@@ -1,0 +1,42 @@
+<config>
+	<append xpath="/items">
+	
+	<item name="drinkCanMegaCrush">
+	<property name="Extends" value="drinkJarRedTea"/>
+	<property name="DisplayType" value="waterMegaCrush"/>
+	<property name="EconomicValue" value="240"/>
+	<property name="UnlockedBy" value="perkMasterChef,drinkCanMegaCrushSchematic"/>	
+	<property class="Action0">
+	</property>
+
+	<effect_group tiered="false" name="Drink Tier Found">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60"/>
+			<display_value name="dStaminaRegen" value=".15"/>
+			<display_value name="dRunSpeed" value=".5"/>
+			<display_value name="dDuration" value="120"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="123"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="363">
+				<requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="363"/></triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffMegaCrush"/>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
+</item>
+	
+		<item name="drinkCanMegaCrushSchematic">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="drinkCanMegaCrush"/>
+	<property name="Unlocks" value="drinkCanMegaCrush"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="drinkCanMegaCrush" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+    </item>
+
+	</append>
+</config>

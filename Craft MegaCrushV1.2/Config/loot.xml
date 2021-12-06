@@ -1,0 +1,7 @@
+<config>
+
+	<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
+	<item name="drinkCanMegaCrushSchematic"/>	
+	</append>
+
+</config>
