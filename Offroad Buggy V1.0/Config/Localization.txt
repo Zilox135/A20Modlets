@@ -1,0 +1,9 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context
+
+vehicleOffroadBuggy,vehicles,vehicle,,,Offroad Buggy,,
+vehicleOffroadBuggyPlaceable,vehicles,item,,,Offroad Buggy,,
+vehicleOffroadBuggyChassisSchematic,vehicles,item,,,Offroad Buggy Chassis Schematic,,
+vehicleOffroadBuggyAccessoriesSchematic,vehicles,item,,,Offroad Buggy Accessories Schematic,,
+vehicleOffroadBuggyChassis,vehicles,item,,,Offroad Buggy Chassis,,
+vehicleOffroadBuggyAccessories,vehicles,item,,,Offroad Buggy Accessories,,
+perkGreaseMonkeyRank4LongDesc,progression,perk Int,,,"Nothing beats the safety and warmth of a nice 4x4 truck. You can craft 4x4 truck parts, Offroad Buggy parts, more efficient stacks of gas cans and quality 4 car batteries. Craft 4x4 truck parts 33% cheaper.",,"

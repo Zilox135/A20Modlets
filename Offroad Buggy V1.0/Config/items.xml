@@ -1,0 +1,60 @@
+<configs>
+
+<append xpath="/items">
+
+<!-- VEHICLES -->
+<item name="vehicleOffroadBuggyChassis">
+	<property name="Extends" value="vehicleWheels"/>
+	<property name="EconomicValue" value="9000"/>
+	<property name="UnlockedBy" value="perkGreaseMonkey,vehicleOffroadBuggyChassisSchematic"/>
+</item>
+
+<item name="vehicleOffroadBuggyAccessories">
+	<property name="Extends" value="vehicleBicycleHandlebars"/>
+	<property name="EconomicValue" value="9000"/>
+	<property name="UnlockedBy" value="perkGreaseMonkey,vehicleOffroadBuggyAccessoriesSchematic"/>
+</item>
+
+<item name="vehicleOffroadBuggyPlaceable">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Meshfile" value="#@modfolder:Resources/OffroadBuggyPrefab.unity3d?OffroadBuggy.prefab"/>
+	<property name="EconomicValue" value="25000"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleOffroadBuggy"/>
+		<property name="VehicleSize" value="2.5, 2.1, 5"/>
+	</property>
+	<effect_group name="vehicleOffroadBuggyPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="15000"/>
+	</effect_group>
+</item>
+
+<!-- SCHEAMTICS -->
+<item name="vehicleOffroadBuggyChassisSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="vehicleOffroadBuggyChassis"/>
+	<property name="Unlocks" value="vehicleOffroadBuggyChassis"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleOffroadBuggyChassis" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="vehicleOffroadBuggyAccessoriesSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="vehicleOffroadBuggyAccessories"/>
+	<property name="Unlocks" value="vehicleOffroadBuggyAccessories"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleOffroadBuggyAccessories" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+</append>
+</configs>
