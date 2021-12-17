@@ -1,0 +1,12 @@
+<Configs>
+
+<append xpath="/Sounds">
+
+<SoundDataNode name="CarHorn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+	<Noise ID="4" noise="60" time="3" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/JeepGladiatorPrefab.unity3d?CarHorn"/>
+	<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxEntities name="6"/> <MaxRepeatRate value="0.01"/> 
+</SoundDataNode>
+
+</append>
+</Configs>	
