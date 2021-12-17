@@ -1,9 +1,0 @@
-Key,File,Type,UsedInMainMenu,NoTranslate,english,Context
-
-vehicleJeepGladiator,vehicles,vehicle,,,Jeep Gladiator,,
-vehicleJeepGladiatorPlaceable,vehicles,item,,,Jeep Gladiator,,
-vehicleJeepGladiatorChassisSchematic,vehicles,item,,,Jeep Gladiator Chassis Schematic,,
-vehicleJeepGladiatorAccessoriesSchematic,vehicles,item,,,Jeep Gladiator Accessories Schematic,,
-vehicleJeepGladiatorChassis,vehicles,item,,,Jeep Gladiator Chassis,,
-vehicleJeepGladiatorAccessories,vehicles,item,,,Jeep Gladiator Accessories,,
-perkGreaseMonkeyRank4LongDesc,progression,perk Int,,,"Nothing beats the safety and warmth of a nice 4x4 truck. You can craft 4x4 truck parts, Jeep Gladiator parts, more efficient stacks of gas cans and quality 4 car batteries. Craft 4x4 truck parts 33% cheaper.",,"
