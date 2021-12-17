@@ -1,0 +1,9 @@
+<Configs>
+
+<append xpath="/traders/trader_item_groups/trader_item_group[@name='vehiclePartsT1']">
+	<item name="vehicleJeepGladiatorPlaceable"/>
+	<item name="vehicleJeepGladiatorChassisSchematic"/>
+	<item name="vehicleJeepGladiatorAccessoriesSchematic"/>	
+</append>
+
+</Configs>
