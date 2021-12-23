@@ -1,0 +1,5 @@
+<Zilox>
+
+<set xpath="//item[@name='vehicleGyrocopterPlaceable']/property[@name='Tags']/@value">vehicle,vengine,vfuel,vseat,canHaveCosmetic</set>
+
+</Zilox>
