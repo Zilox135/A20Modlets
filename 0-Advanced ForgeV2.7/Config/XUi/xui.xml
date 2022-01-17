@@ -1,0 +1,15 @@
+<Zilox>
+<append xpath="/xui/ruleset[@name='default']" >
+
+		<window_group name="workstation_Advancedforge" controller="XUiC_WorkstationWindowGroup" open_backpack_on_open="true" close_compass_on_open="true">
+			<window name="windowCraftingList"/>
+			<window name="craftingInfoPanel"/>
+			<window name="windowCraftingQueue"/>
+			<window name="windowToolsAdvancedForge" />
+	        <window name="windowInputAdvancedForge" />
+	        <window name="windowOutputAdvancedForge" />
+			<window name="windowNonPagingHeader" />
+		</window_group>
+
+</append>
+</Zilox>

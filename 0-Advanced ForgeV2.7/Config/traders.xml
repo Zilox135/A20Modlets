@@ -1,0 +1,14 @@
+<Zilox>
+
+<append xpath="//trader_item_group[@name='schematicsToolsRare']">
+	<item name="AdvancedforgeSchematic" count="1"/>
+	<item name="toolIndustrialBellowsSchematic"/>
+	<item name="toolIndustrialAnvilSchematic"/>	
+</append>
+
+<append xpath="//trader_item_group[@name='tools']">
+	<item name="toolIndustrialAnvil" count="1"/>
+	<item name="toolIndustrialBellows" prob="0.7"/>
+</append>
+
+</Zilox>
