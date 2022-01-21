@@ -1,0 +1,105 @@
+<configs>
+<!--	// SMX // Workstation Tools - Forge -->
+
+		<append xpath="/windows">
+			<window name="windowToolsAdvancedForgeSMX" depth="11" width="136" height="68" panel="Left" cursor_area="true">
+
+				<rect name="smxui_tools_module" depth="9" pos="410,802" width="68" height="204" disablefallthrough="true">
+
+					<label name="smxui_tools_grid_label" depth="9" pos="34,10" width="68" height="22" style="smxlib_label_normal" text="TOOLS" text_key="xuiTools" font_size="18" pivot="center" justify="center" upper_case="true" color="[smxui_element_labelcolor_2]" overflow="ShrinkContent" />
+
+					<sprite name="backgroundMain" depth="2" width="68" height="136" sprite="menu_empty" type="sliced" color="[smxui_slot_main_background]" />
+
+					<grid	name="inventory" depth="10" pos="34,-34" rows="3" cols="1" cell_width="68" cell_height="68" arrangement="horizontal" repeat_content="true" controller="WorkstationToolGrid"
+							required_tools="toolIndustrialBellows,toolIndustrialAnvil,toolForgeCrucible" required_tools_only="true">
+						<smxui_tool_item_stack controller="RequiredItemStack" name="0" />
+					</grid>
+				</rect>
+
+				<rect name="smxui_forgetools_art_module" depth="10" pos="410,592" width="136" height="80">
+					<sprite name="smxui_artline_vertical" depth="1" pos="0,240" width="68" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="0" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+				</rect>
+			</window>
+		</append>
+
+<!--	// SMX // Workstation Fuel Window -->
+		<append xpath="/windows">
+			<window name="windowFuelAdvancedForgeSMX" depth="11" width="136" height="68" panel="Left" cursor_area="true">
+				<rect name="smxui_button_module" depth="9" pos="410,831" width="136" height="40">		
+
+					<sprite name="flameIcon" depth="5" pos="88,-597" size="25,25" sprite="ui_game_symbol_fire" />
+
+					<label name="burnTimeLeft" depth="4" pos="102,-333" width="60" height="22" style="smxlib_label_normal" text="00:00" font_size="22" pivot="center" justify="center" color="[smxui_element_labelcolor_2]" overflow="ShrinkContent" />
+					<smxlib_modular_frame name="smxui_fuel_burntime" depth="1" pos="72,-319" width="64" height="25" pivot="center" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+				</rect>
+
+				<rect name="smxui_fuel_art_module" depth="10" pos="410,515" width="136" height="40">
+					<sprite name="smxui_artline_vertical" depth="1" pos="102,-30" width="10" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="270" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+					<sprite name="smxui_artline_vertical" depth="1" pos="102,270" width="33" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="270" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+
+					<sprite name="smxui_artline_horizontal" depth="1" pos="0,270" width="136" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="0" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+					<sprite name="smxui_artline_horizontal" depth="1" pos="68,240" width="68" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="0" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+
+					<sprite name="smxui_artbox_background_45" depth="2" pos="63,-295" width="54" height="54" sprite="smxlib_artbox_background" rotation="45" color="[smxui_element_background]" globalopacitymod="1.8" />
+					<sprite name="smxui_artbox_foreground_45" depth="3" pos="66,-296" width="50" height="50" sprite="smxlib_artbox_foreground" rotation="45" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+
+					<sprite name="smxui_artline_vertical" depth="1" pos="102,-299" width="32" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="270" color="[smxui_element_separation_1]" globalopacitymod="1.2" />
+					<sprite name="smxui_artline_horizontal" depth="1" pos="102,-295" width="32" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="0" color="[smxui_element_separation_1]" globalopacitymod="1.2" />
+				</rect>
+			</window>
+		</append>
+
+<!--	// SMX // Workstation Input - Forge -->
+		<append xpath="/windows">
+			<window name="windowAdvancedForgeInputSMX" depth="12" width="68" height="68" panel="Left" cursor_area="true" controller="WorkstationMaterialInputWindow"
+					materials_accepted="iron,brass,lead,glass,stone,clay" valid_materials_color="[smxui_crafting_valid_entry]" invalid_materials_color="[smxui_crafting_invalid_entry]">
+
+				<rect name="smxui_forgeinput_resources_module" depth="9" pos="570,879" width="68" height="136">
+
+					<sprite name="backgroundMain" depth="2" width="68" height="136" sprite="menu_empty" type="sliced" color="[smxui_slot_main_background]" on_press="true" />
+
+					<rect name="smxui_forgeinput_resources_content" depth="1" height="136">
+
+						<label name="smxui_input_grid_label" depth="9" pos="34,10" width="68" height="22" style="smxlib_label_normal" text="INPUT" text_key="xuiSmelting" font_size="18" pivot="center" justify="center" upper_case="true" color="[smxui_element_labelcolor_2]" overflow="ShrinkContent" />
+
+						<grid name="smxui_input_grid" depth="10" pos="34,-34" rows="3" cols="1" cell_width="68" cell_height="68" repeat_content="true" controller="WorkstationMaterialInputGrid">
+							<smxui_preview_item_stack name="0" />
+						</grid>
+
+						<grid name="smxui_slot_preview" depth="6" rows="3" cols="1" pos="34,-34" cell_width="68" cell_height="68" controller="SlotPreview">
+							<rect>
+								<sprite name="slot" depth="4" size="50,50" atlas="UIAtlas" sprite="ui_game_symbol_fire" pivot="center" color="[red]" globalopacitymod="0.8" foregroundlayer="true" />
+							</rect>
+							<rect>
+								<sprite name="slot" depth="4" size="50,50" atlas="UIAtlas" sprite="ui_game_symbol_fire" pivot="center" color="[red]" globalopacitymod="0.8" foregroundlayer="true" />
+							</rect>
+							<rect>
+								<sprite name="slot" depth="4" size="50,50" atlas="UIAtlas" sprite="ui_game_symbol_fire" pivot="center" color="[red]" globalopacitymod="0.8" foregroundlayer="true" />
+							</rect>							
+						</grid>
+					</rect>
+
+					<rect name="smxui_forgeinput_materials_module" depth="1" pos="-8,-247" width="68" height="70">
+
+						<smxlib_modular_frame name="smxui_forgeinput_materials" depth="9" pos="3,-2" width="80" height="195" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+
+						<grid name="smxui_forgeinput_materials" depth="10" pos="5,-5" rows="6" cols="1" cell_width="113" cell_height="32" repeat_content="false" arrangement="horizontal">
+							<smxui_forge_materials name="resourceScrapIron" />
+							<smxui_forge_materials name="resourceScrapBrass" />
+							<smxui_forge_materials name="resourceScrapLead" />
+							<smxui_forge_materials name="resourceCrushedSand" />
+							<smxui_forge_materials name="resourceRockSmall" />
+							<smxui_forge_materials name="resourceClayLump" />
+						</grid>
+
+						<rect name="smxui_fuel_art_module" depth="10" pos="-62,282" width="136" height="40">
+							<sprite name="smxui_artline_horizontal" depth="1" pos="50,25" width="70" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="0" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+							<sprite name="smxui_artline_vertical" depth="1" pos="105,47" width="55" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="270" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+							<sprite name="smxui_artline_horizontal" depth="1" pos="70,-5" width="68" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="0" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+							<sprite name="smxui_artline_vertical" depth="1" pos="105,-240" width="115" height="3" sprite="smxlib_separation_line_1" flip="vertically" rotation="270" color="[smxui_element_accentcolor_2]" globalopacitymod="1.2" />
+						</rect>
+					</rect>
+				</rect>
+			</window>
+		</append>		
+</configs>

@@ -1,0 +1,22 @@
+<Zilox>
+
+		<set xpath="/xui/ruleset[@name='default']/window_group[@name='workstation_Advancedforge']">
+			<window name="windowCraftingListWorkstationForge" />
+			<window name="craftingInfoPanel" />
+			<window name="windowOutputWorkstationFuel" />
+			<window name="windowCraftingQueueWorkstationFuel" />
+			<window name="windowFuelAdvancedForgeSMX" />
+			<window name="windowToolsAdvancedForgeSMX" />
+			<window name="windowAdvancedForgeInputSMX" />
+			<window name="windowNonPagingHeader" />
+		</set>
+
+		<setattribute xpath="/xui//window_group[@name='workstation_Advancedforge']" name="controller">XUiC_WorkstationWindowGroup</setattribute>
+		<setattribute xpath="/xui//window_group[@name='workstation_Advancedforge']" name="open_backpack_on_open">true</setattribute>
+		<setattribute xpath="/xui//window_group[@name='workstation_Advancedforge']" name="close_compass_on_open">true</setattribute>
+		
+		<insertAfter xpath="/xui/ruleset[@name='default']/window_group[contains (@name, 'orkstation') and not (contains (@name, 'Fuel'))]/window[2]">
+			<window name="windowOutputWorkstation" />
+		</insertAfter>		
+
+</Zilox>
