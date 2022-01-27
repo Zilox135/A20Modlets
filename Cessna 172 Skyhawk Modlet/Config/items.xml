@@ -1,0 +1,78 @@
+<Zilox>
+
+<append xpath="/items">
+
+<item name="vehicleCessnaPlanePlaceable">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,vseat,canHaveCosmetic"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Cessna172PlanePrefab.unity3d?Cessna172Plane.prefab"/>
+	<property name="EconomicValue" value="50000"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleCessnaPlane"/>
+		<property name="VehicleSize" value="2.5, 2.5, 5.5"/>
+	</property>
+	<effect_group name="vehicleCessnaPlanePlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="5"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="8000"/>
+	</effect_group>
+</item>
+
+<item name="vehicleCessnaPlaneChassis">
+	<property name="Extends" value="vehicleWheels"/>
+	<property name="EconomicValue" value="15000"/>
+	<property name="UnlockedBy" value="perkGreaseMonkey,vehicleCessnaPlaneChassisSchematic"/>
+</item>
+
+<item name="vehicleCessnaPlaneAccessories">
+	<property name="Extends" value="vehicleBicycleHandlebars"/>
+	<property name="EconomicValue" value="15000"/>
+	<property name="UnlockedBy" value="perkGreaseMonkey,vehicleCessnaPlaneAccessoriesSchematic"/>
+</item>
+
+<!-- SCHEMATICS -->
+<item name="vehicleCessnaPlaneChassisSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="vehicleCessnaPlaneChassis"/>
+	<property name="Unlocks" value="vehicleCessnaPlaneChassis"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleCessnaPlaneChassis" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="vehicleCessnaPlaneAccessoriesSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="vehicleCessnaPlaneAccessories"/>
+	<property name="Unlocks" value="vehicleCessnaPlaneAccessories"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleCessnaPlaneAccessories" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<!-- PARTS BUNDLE -->
+
+<item name="questRewardCessnaPartsBundle">
+	<property name="Extends" value="noteTestersDelightAdmin"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="bundleVehicleGyro"/>
+	<property name="CustomIconTint" value="#00FFFF"/>
+	<property name="ItemTypeIcon" value="bundle"/>
+	<property name="DescriptionKey" value="questRewardVechileBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="vehicleWheels"/>
+		<property name="Create_item_count" value="3"/>
+		<property name="Random_item" value="smallEngine,carBattery,vehicleCessnaPlaneChassis,vehicleCessnaPlaneAccessories"/>
+		<property name="Random_item_count" value="1,1,1,1,1"/>
+		<property name="Random_count" value="2"/>
+		<property name="Unique_random_only" value="true"/>
+	</property>
+</item>
+
+</append>
+</Zilox>

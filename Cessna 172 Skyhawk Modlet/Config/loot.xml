@@ -1,0 +1,34 @@
+<Zilox>
+
+<insertAfter xpath="//lootgroup[@name='empty']">
+<!-- *** Cessna_Parts -->
+<lootgroup name="CessnaParts">
+	<item name="vehicleCessnaPlaneChassis"/>
+	<item name="vehicleCessnaPlaneAccessories"/>
+	<item name="vehicleWheels"/>
+	<item name="smallEngine"/>
+	<item name="carBattery"/>
+</lootgroup>
+
+<lootgroup name="groupQuestCessnaParts" count="all">
+	<item name="questRewardCessnaPartsBundle"/>
+</lootgroup>
+</insertAfter>
+
+<append xpath="//lootgroup[@name='vehiclePartsTiered']">
+	<item group="CessnaParts" loot_prob_template="ProbT3"/>
+</append>
+
+<append xpath="//lootgroup[@name='schematicsVehiclesT2']">
+	<item name="vehicleCessnaPlaneChassisSchematic"/>
+	<item name="vehicleCessnaPlaneAccessoriesSchematic"/>
+</append>
+
+<append xpath="/lootcontainers">
+
+<!-- vehicleCessnaPlane storage -->
+<lootcontainer id="80" name="vehicleCessnaPlane" count="0" size="11,6" sound_open="UseActions/open_shopping_basket" open_time="0" sound_close="UseActions/close_shopping_basket" loot_quality_template="qualBaseTemplate">
+</lootcontainer>
+
+</append>
+</Zilox>

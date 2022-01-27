@@ -1,0 +1,14 @@
+<Zilox>
+
+<append xpath="//trader_item_group[@name='vehiclePartsT1']">
+	<item name="vehicleCessnaPlaneChassis"/>
+	<item name="vehicleCessnaPlaneAccessories"/>
+	<item name="vehicleCessnaPlanePlaceable"/>
+</append>
+
+<append xpath="//trader_item_group[@name='rareBooks']">
+	<item name="vehicleCessnaPlaneChassisSchematic"/>
+	<item name="vehicleCessnaPlaneAccessoriesSchematic"/>
+</append>
+
+</Zilox>

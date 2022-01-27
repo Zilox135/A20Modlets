@@ -1,0 +1,10 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context
+
+vehicleCessnaPlane,vehicles,vehicle,,,Cessna 172 Skyhawk,,
+vehicleCessnaPlanePlaceable,vehicles,item,,,Cessna 172 Skyhawk,,
+vehicleCessnaPlaneChassisSchematic,vehicles,item,,,Cessna 172 Skyhawk Chassis Schematic,,
+vehicleCessnaPlaneAccessoriesSchematic,vehicles,item,,,Cessna 172 Skyhawk Accessories Schematic,,
+vehicleCessnaPlaneChassis,vehicles,item,,,Cessna 172 Skyhawk Chassis,,
+vehicleCessnaPlaneAccessories,vehicles,item,,,Cessna 172 Skyhawk Accessories,,
+perkGreaseMonkeyRank5LongDesc,progression,perk Int,,,"Your tinkering desire is never satisfied and only a true genius could figure out how to take to the skies with scrap iron. Can craft gyrocopter parts, cessna 172 skyhawk parts and quality 5 car batteries. Craft gyrocopter and cessna parts 33% cheaper.",,
+questRewardCessnaPartsBundle,items,item,,,Cessna 172 Skyhawk Parts Bundle,,
