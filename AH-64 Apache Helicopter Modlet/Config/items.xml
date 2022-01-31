@@ -1,0 +1,78 @@
+<Zilox>
+
+<append xpath="/items">
+
+<item name="vehicleApacheHelicopterPlaceable">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vengine,vfuel,vlight,canHaveCosmetic"/>
+	<property name="Meshfile" value="#@modfolder:Resources/ApacheHelicopterPrefab.unity3d?AH64ApacheHelicopter.prefab"/>
+	<property name="EconomicValue" value="70000"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleApacheHelicopter"/>
+		<property name="VehicleSize" value="2.5, 2.5, 5.5"/>
+	</property>
+	<effect_group name="vehicleApacheHelicopterPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="4"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="10000"/>
+	</effect_group>
+</item>
+
+<item name="vehicleApacheHelicopterChassis">
+	<property name="Extends" value="vehicleWheels"/>
+	<property name="EconomicValue" value="15000"/>
+	<property name="UnlockedBy" value="perkGreaseMonkey,vehicleApacheHelicopterChassisSchematic"/>
+</item>
+
+<item name="vehicleApacheHelicopterAccessories">
+	<property name="Extends" value="vehicleBicycleHandlebars"/>
+	<property name="EconomicValue" value="15000"/>
+	<property name="UnlockedBy" value="perkGreaseMonkey,vehicleApacheHelicopterAccessoriesSchematic"/>
+</item>
+
+<!-- SCHEMATICS -->
+<item name="vehicleApacheHelicopterChassisSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="vehicleApacheHelicopterChassis"/>
+	<property name="Unlocks" value="vehicleApacheHelicopterChassis"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleApacheHelicopterChassis" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="vehicleApacheHelicopterAccessoriesSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="vehicleApacheHelicopterAccessories"/>
+	<property name="Unlocks" value="vehicleApacheHelicopterAccessories"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleApacheHelicopterAccessories" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<!-- PARTS BUNDLE -->
+
+<item name="questRewardHelicopterPartsBundle">
+	<property name="Extends" value="noteTestersDelightAdmin"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="bundleVehicleGyro"/>
+	<property name="CustomIconTint" value="#00FFFF"/>
+	<property name="ItemTypeIcon" value="bundle"/>
+	<property name="DescriptionKey" value="questRewardVechileBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="vehicleWheels"/>
+		<property name="Create_item_count" value="3"/>
+		<property name="Random_item" value="smallEngine,carBattery,vehicleApacheHelicopterChassis,vehicleApacheHelicopterAccessories"/>
+		<property name="Random_item_count" value="1,1,1,1,1"/>
+		<property name="Random_count" value="2"/>
+		<property name="Unique_random_only" value="true"/>
+	</property>
+</item>
+
+</append>
+</Zilox>
