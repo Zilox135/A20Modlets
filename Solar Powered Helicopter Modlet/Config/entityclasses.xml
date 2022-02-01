@@ -1,0 +1,27 @@
+<Zilox>
+
+<append xpath="/entity_classes">
+
+<entity_class name="vehicleElectricHelicopter">
+	<property name="Tags" value="vehicle"/>
+	<property name="Class" value="EntityVHelicopter"/>
+	<property name="Parent" value="Cars"/>
+	<property name="Prefab" value="#@modfolder:Resources/ElectricHelicopterPrefab.unity3d?ElectricPoweredHelicopter.prefab"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="SurfaceCategory" value="metal"/>
+	<property name="IgnoreTrigger" value="true"/>
+	<property name="LootListAlive" value="vehicleGyrocopter"/>
+	<property name="IsEnemyEntity" value="false"/>
+	<property name="Explosion.ParticleIndex" value="6"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="30"/>
+	<property name="Explosion.EntityDamage" value="30"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="Faction" value="none"/>
+	<property name="MapIcon" value="ui_game_symbol_solarhelicopter"/>
+	<property name="NavObject" value="SolarHelicopter" />
+</entity_class>
+
+</append>
+</Zilox>

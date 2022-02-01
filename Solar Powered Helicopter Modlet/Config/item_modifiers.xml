@@ -1,0 +1,6 @@
+<Zilox>
+
+<!-- TAGS FOR VEHICLE TURBO ONLY -->
+<append xpath="/item_modifiers/item_modifier[@name='modVehicleSuperCharger']/@installable_tags">,vturbo</append>
+
+</Zilox>

@@ -1,0 +1,27 @@
+<Zilox>
+
+<insertAfter xpath="//lootgroup[@name='empty']">
+<!-- *** Cessna_Parts -->
+<lootgroup name="SolarHelicopterParts">
+	<item name="vehicleElectricHelicopterChassis"/>
+	<item name="vehicleElectricHelicopterAccessories"/>
+	<item name="vehicleWheels"/>
+	<item name="smallEngine"/>
+	<item name="carBattery"/>
+</lootgroup>
+
+<lootgroup name="groupQuestSolarHelicopterParts" count="all">
+	<item name="questRewardSolarHelicopterPartsBundle"/>
+</lootgroup>
+</insertAfter>
+
+<append xpath="//lootgroup[@name='vehiclePartsTiered']">
+	<item group="SolarHelicopterParts" loot_prob_template="ProbT3"/>
+</append>
+
+<append xpath="//lootgroup[@name='schematicsVehiclesT2']">
+	<item name="vehicleElectricHelicopterChassisSchematic"/>
+	<item name="vehicleElectricHelicopterAccessoriesSchematic"/>
+</append>
+
+</Zilox>

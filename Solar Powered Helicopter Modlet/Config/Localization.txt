@@ -1,0 +1,10 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context
+
+vehicleElectricHelicopter,vehicles,vehicle,,,Solar Powered Helicopter,,
+vehicleElectricHelicopterPlaceable,vehicles,item,,,Solar Powered Helicopter,,
+vehicleElectricHelicopterChassisSchematic,vehicles,item,,,Solar Powered Helicopter Chassis Schematic,,
+vehicleElectricHelicopterAccessoriesSchematic,vehicles,item,,,Solar Powered Helicopter Accessories Schematic,,
+vehicleElectricHelicopterChassis,vehicles,item,,,Solar Powered Helicopter Chassis,,
+vehicleElectricHelicopterAccessories,vehicles,item,,,Solar Powered Helicopter Accessories,,
+perkGreaseMonkeyRank5LongDesc,progression,perk Int,,,"Your tinkering desire is never satisfied and only a true genius could figure out how to take to the skies with scrap iron. Can craft gyrocopter parts, Solar Powered Helicopter parts and quality 5 car batteries. Craft gyrocopter and solar helicopter parts 33% cheaper.",,
+questRewardSolarHelicopterPartsBundle,items,item,,,Solar Powered Helicopter Parts Bundle,,

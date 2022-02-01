@@ -1,0 +1,17 @@
+<Zilox>
+
+<append xpath="/Sounds">
+
+<!-- HELICOPTER SOUNDS -->
+
+<SoundDataNode name="Helicopter_Flying"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+	<AudioClip ClipName="#@modfolder:Resources/ElectricHelicopterPrefab.unity3d?SolarHelicopterFlying" Loop="true"/>
+	<LocalCrouchVolumeScale value="1.0"/> 
+	<CrouchNoiseScale value="0.5"/> 
+	<NoiseScale value="1"/> 
+	<MaxVoices value="10"/> 
+	<MaxRepeatRate value="0.01"/> 
+</SoundDataNode>
+
+</append>
+</Zilox>

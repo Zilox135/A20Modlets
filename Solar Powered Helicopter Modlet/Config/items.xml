@@ -1,0 +1,78 @@
+<Zilox>
+
+<append xpath="/items">
+
+<item name="vehicleElectricHelicopterPlaceable">
+	<property name="Extends" value="vehicleMinibikePlaceable"/>
+	<property name="Tags" value="vehicle,vturbo,vlight,canHaveCosmetic"/>
+	<property name="Meshfile" value="#@modfolder:Resources/ElectricHelicopterPrefab.unity3d?ElectricPoweredHelicopter.prefab"/>
+	<property name="EconomicValue" value="50000"/>
+	<property class="Action1">
+		<property name="Vehicle" value="vehicleElectricHelicopter"/>
+		<property name="VehicleSize" value="2.5, 2.5, 5.5"/>
+	</property>
+	<effect_group name="vehicleElectricHelicopterPlaceable" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="2"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="5000"/>
+	</effect_group>
+</item>
+
+<item name="vehicleElectricHelicopterChassis">
+	<property name="Extends" value="vehicleWheels"/>
+	<property name="EconomicValue" value="15000"/>
+	<property name="UnlockedBy" value="perkGreaseMonkey,vehicleElectricHelicopterChassisSchematic"/>
+</item>
+
+<item name="vehicleElectricHelicopterAccessories">
+	<property name="Extends" value="vehicleBicycleHandlebars"/>
+	<property name="EconomicValue" value="15000"/>
+	<property name="UnlockedBy" value="perkGreaseMonkey,vehicleElectricHelicopterAccessoriesSchematic"/>
+</item>
+
+<!-- SCHEMATICS -->
+<item name="vehicleElectricHelicopterChassisSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="vehicleElectricHelicopterChassis"/>
+	<property name="Unlocks" value="vehicleElectricHelicopterChassis"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleElectricHelicopterChassis" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<item name="vehicleElectricHelicopterAccessoriesSchematic">
+	<property name="Extends" value="schematicNoQualityMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="vehicleElectricHelicopterAccessories"/>
+	<property name="Unlocks" value="vehicleElectricHelicopterAccessories"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleElectricHelicopterAccessories" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="vehicleWheels" operation="set" value="1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+	</effect_group>
+</item>
+
+<!-- PARTS BUNDLE -->
+
+<item name="questRewardSolarHelicopterPartsBundle">
+	<property name="Extends" value="noteTestersDelightAdmin"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="CustomIcon" value="bundleVehicleGyro"/>
+	<property name="CustomIconTint" value="#00FFFF"/>
+	<property name="ItemTypeIcon" value="bundle"/>
+	<property name="DescriptionKey" value="questRewardVechileBundleDesc"/>
+	<property class="Action0">
+		<property name="Create_item" value="solarbank"/>
+		<property name="Create_item_count" value="1"/>
+		<property name="Random_item" value="solarCell,carBattery,vehicleElectricHelicopterChassis,vehicleElectricHelicopterAccessories"/>
+		<property name="Random_item_count" value="1,1,1,1,1"/>
+		<property name="Random_count" value="2"/>
+		<property name="Unique_random_only" value="true"/>
+	</property>
+</item>
+
+</append>
+</Zilox>

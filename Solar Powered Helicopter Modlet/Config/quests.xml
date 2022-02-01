@@ -1,0 +1,11 @@
+<Zilox>
+
+<append xpath="//quest[@id='quest_tier5complete']">
+	<reward type="LootItem" id="groupQuestSolarHelicopterParts" ischosen="true" value="6"/>
+</append>
+
+<append xpath="//quest[@id='quest_tier4complete']">
+	<reward type="LootItem" id="groupQuestSolarHelicopterParts" ischosen="true" value="6"/>
+</append>
+
+</Zilox>

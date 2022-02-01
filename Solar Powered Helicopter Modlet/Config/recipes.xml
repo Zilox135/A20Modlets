@@ -1,0 +1,36 @@
+<Zilox>
+
+<append xpath="/recipes">
+
+<recipe name="vehicleElectricHelicopterAccessories" count="1" craft_time="270" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+	<ingredient name="resourceElectricParts" count="33"/>
+	<ingredient name="resourceHeadlight" count="2"/>
+	<ingredient name="resourceMetalPipe" count="50"/>
+	<ingredient name="resourceMechanicalParts" count="10"/>
+	<ingredient name="resourceSpring" count="4"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,4" value=".5,.5" tags="resourceMechanicalParts,resourceMetalPipe,resourceElectricParts,resourceSpring"/>
+	</effect_group>
+</recipe>
+
+<recipe name="vehicleElectricHelicopterChassis" count="1" craft_time="270" craft_area="workbench" tags="perkGreaseMonkey,learnable,workbenchCrafting">
+	<ingredient name="resourceForgedSteel" count="125"/>
+	<ingredient name="resourceMechanicalParts" count="40"/>
+	<ingredient name="resourceDuctTape" count="25"/>
+	<ingredient name="resourceLeather" count="40"/>
+	<ingredient name="resourceElectricParts" count="20"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" operation="perc_add" level="0,4" value=".5,.5" tags="resourceForgedSteel,resourceMechanicalParts,resourceDuctTape,resourceLeather,resourceElectricParts"/>
+	</effect_group>
+</recipe>
+
+<recipe name="vehicleElectricHelicopterPlaceable" count="1" craft_time="270" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="solarCell" count="1"/>
+	<ingredient name="vehicleElectricHelicopterChassis" count="1"/>
+	<ingredient name="vehicleElectricHelicopterAccessories" count="1"/>
+	<ingredient name="solarbank" count="1"/>
+	<ingredient name="carBattery" count="1"/>
+</recipe>
+
+</append>
+</Zilox>
