@@ -6,6 +6,7 @@
 	<property name="Class" value="Campfire"/>
     <property name="CustomIcon" value="chemistryStation"/>
 	<property name="CustomIconTint" value="#ff0000"/>
+	<property name="TintColor" value="ff4f2c"/>	
 	<property name="DescriptionKey" value="AdvancedchemistryStationDesc"/>
 	<property name="Material" value="Miron_scrap"/>
 	<property name="MaxDamage" value="5000"/>
