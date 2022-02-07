@@ -23,7 +23,7 @@
 		<property name="waterDrag_y_velScale_velMaxScale" value="1.5, .9, 1"/>
 		<property name="waterLift_y_depth_force" value="1, .5, .1"/>
 
-		<property name="hornSound" value="Helicopter_Horn"/>
+		<property name="hornSound" value="ApacheHelicopter_Horn"/>
 
 		<property class="engine">
 			<property name="class" value="Engine"/>
@@ -34,11 +34,11 @@
 								500,2500, -1400,800,0, 1500,9999,9999,
 								,
 								,
-								0, .5,  .45, .1,  -9, .1, .1, Vehicles/Gyrocopter/Helicopter_Flying,
-								-.1, .1,  .65, .7,  0, 9, .1, Vehicles/Gyrocopter/Helicopter_Flying1
+								0, .5,  .45, .1,  -9, .1, .1, ApacheHelicopter_Flying,
+								-.1, .1,  .65, .7,  0, 9, .1, ApacheHelicopter_Flying1
 								"/>
-			<property name="sound_start" value="Vehicles/Gyrocopter/Helicopter_Start"/>
-			<property name="sound_shut_off" value="Vehicles/Gyrocopter/Helicopter_ShutOff"/>
+			<property name="sound_start" value="ApacheHelicopter_Start"/>
+			<property name="sound_shut_off" value="ApacheHelicopter_ShutOff"/>
 			<property name="sound_no_fuel_shut_off" value="Vehicles/Gyrocopter/gyrocopter_sputter"/>
 			<property name="paint" value="helicopter_mesh_paint"/>
 		</property>
