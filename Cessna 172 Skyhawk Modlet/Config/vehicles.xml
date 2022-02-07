@@ -12,7 +12,7 @@
 		<property name="steerRate" value="130"/>
 		<property name="steerCenteringRate" value="90"/>
 
-		<property name="tiltAngleMax" value="8"/>
+		<property name="tiltAngleMax" value="1"/>
 		<property name="tiltThreshold" value="2"/>
 		<property name="tiltDampening" value=".01"/>
 		<property name="tiltDampenThreshold" value="0"/>
@@ -114,6 +114,19 @@
 			<property name="axis" value="2"/>
 		</property>
 
+		<property class="motor1">
+			<property name="engine" value="engine"/>
+			<property name="engineOffPer" value=".05"/>
+			<property name="turbo" value="1.35"/>
+			<property name="rpmAccel_min_max" value="0, .1"/>
+			<property name="rpmMax" value="8"/>
+			<property name="rpmDrag" value=".993"/>
+			<property name="trigger" value="inputForward"/>
+			<property name="type" value="spin"/>
+			<property name="transform" value="Origin/BackPropellerJoint"/>
+			<property name="axis" value="2"/>
+		</property>
+
 		<property class="force0">
 			<property name="trigger" value="motor0"/>
 			<property name="type" value="relative"/>
@@ -122,6 +135,7 @@
 		</property>
 
 		<property class="force1">
+			<property name="trigger" value="motor1"/>
 			<property name="type" value="relative"/>
 			<property name="force" value="0, 0, .15"/>
 		</property>
