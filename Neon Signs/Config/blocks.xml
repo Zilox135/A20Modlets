@@ -1,0 +1,120 @@
+<configs>
+	<append xpath="/blocks">
+	<!-- POWERED SIGNS -->
+		<block name="PoweredNeonSignMaster">
+			<property name="Extends" value="ceilingLight02" />
+			<property name="ItemTypeIcon" value="all_blocks"/>
+			<property name="CustomIcon" value="openSign" />
+			<property name="DescriptionKey" value="PoweredNeonSignMasterDesc"/>
+	        <property name="UnlockedBy" value="perkAdvancedEngineering,generatorbankSchematic"/>			
+			<property name="Class" value="BlockNeonSign, NeonSigns" />
+			<property name="Model" value="#@modfolder:Resources/NeonSign.unity3d?NeonOpenSignPrefab" />
+			<property name="Collide" value="movement,melee,rocket" />
+			<property name="HandleFace" value="South" />
+			<property name="TakeDelay" value="5" />
+			<property name="AllowRemotePower" value="false" />
+			<property name="LightObject" value="NeonText" />
+			<property name="SelectAlternates" value="true"/>
+			<property name="PlaceAltBlockValue" value="PoweredNeonOpenSign,PoweredNeonOpenSignFlashing,PoweredNeonBowlingSignFlashing,PoweredNeonPizzaSign,PoweredNeonPizzaSignFlashing,PoweredNeonGunSign,PoweredNeonChineseFoodSign,PoweredNeonOpenSign2"/>
+		</block>
+		<block name="PoweredNeonOpenSign">
+			<property name="Extends" value="ceilingLight01_player" />
+			<property name="CustomIcon" value="openSign" />
+			<property name="Class" value="BlockNeonSign, NeonSigns" />
+			<property name="Model" value="#@modfolder:Resources/NeonSign.unity3d?NeonOpenSignPrefab" />
+			<property name="Collide" value="movement,melee,rocket" />
+			<property name="HandleFace" value="South" />
+			<property name="TakeDelay" value="5" />
+			<property name="AllowRemotePower" value="false" />
+			<property name="LightObject" value="NeonText" />
+			<property name="TakeAltBlock" value="NeonSignMaster"/>
+		</block>
+		<block name="PoweredNeonOpenSignFlashing">
+			<property name="Extends" value="PoweredNeonOpenSign" />
+			<property name="Model" value="#@modfolder:Resources/NeonSign.unity3d?NeonOpenSign2Prefab" />
+			<!-- RGB Color Codes - An unlimited amount of colors can be set if the model is setup for it -->
+			<property name="color1" value="255, 0, 0" /> <!-- Red Text -->
+			<property name="Flash" value="true" />
+		</block>
+		<block name="PoweredNeonBowlingSignFlashing">
+			<property name="Extends" value="PoweredNeonOpenSign" />
+			<property name="CustomIcon" value="neonBowlingSign" />
+			<property name="Model" value="#@modfolder:Resources/NeonSign.unity3d?BowlingNeonSignPrefab" />
+			<property name="Flash" value="true" />
+			<property name="FlashSpeed" value="1" />
+			<property name="color1" value="0, 0, 255" /> <!-- Blue --> <!-- Ball -->
+			<property name="color2" value="0, 255, 0" /> <!-- Green --> <!-- Holes -->
+			<property name="color3" value="255, 215, 0" /> <!-- Gold --> <!-- Pin -->
+			<property name="color4" value="255, 0, 255" /> <!-- Magenta --> <!-- Stripes -->
+		</block>
+		<block name="PoweredNeonPizzaSign">
+			<property name="Extends" value="PoweredNeonOpenSign" />
+			<property name="CustomIcon" value="pizzaSign" />
+			<property name="Model" value="#@modfolder:Resources/NeonSign.unity3d?PizzaSignPrefab" />
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="3,2,1" />
+			<property name="color1" value="0, 255, 0" /> <!-- Lime --> <!-- Crusts & Slice -->
+			<property name="color2" value="0, 128, 128" /> <!-- Teal --> <!-- 3 x Topping -->
+			<property name="color3" value="255, 0, 0" /> <!-- Red --> <!-- 4 x Topping -->
+			<property name="color4" value="255, 255, 0" /> <!-- Yellow --> <!-- Steam -->
+			<property name="color5" value="0, 128, 0" /> <!-- Green --> <!-- Letter P -->
+			<property name="color6" value="0, 128, 0" /> <!-- Green --> <!-- Letter I -->
+			<property name="color7" value="0, 128, 0" /> <!-- Green --> <!-- Letter Z -->
+			<property name="color8" value="0, 128, 0" /> <!-- Green --> <!-- Letter Z -->
+			<property name="color9" value="0, 128, 0" /> <!-- Green --> <!-- Letter A --> 
+		</block>
+		<block name="PoweredNeonPizzaSignFlashing">
+			<property name="Extends" value="PoweredNeonPizzaSign" />
+			<property name="Flash" value="true" />
+			<property name="FlashSpeed" value="1" />
+			<property name="color5" value="255, 0, 0" /> <!-- Red --> <!-- Letter P -->
+			<property name="color6" value="0, 128, 0" /> <!-- Green --> <!-- Letter I -->
+			<property name="color7" value="0, 0, 255" /> <!-- Blue --> <!-- Letter Z -->
+			<property name="color8" value="255, 255, 0" /> <!-- Yellow --> <!-- Letter Z -->
+			<property name="color9" value="255, 0, 255" /> <!-- Magenta --> <!-- Letter A --> 
+		</block>
+		<block name="PoweredNeonGunSign">
+			<!-- This model is setup with 14 color options, you can change the color of every part by adding color1 - color14. You dont have to set every color, you can just change the parts you need -->
+			<property name="Extends" value="PoweredNeonOpenSign" />
+			<property name="Model" value="#@modfolder:Resources/NeonSign.unity3d?GunNeonSignPrefab" />
+			<property name="CustomIcon" value="handGunSign" />
+			<property name="LightObject" value="LitObjects" />
+			<property name="Flash" value="false" />
+			<property name="FlashSpeed" value="1" />
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="3,1,1" />
+		</block>
+		<block name="PoweredNeonChineseFoodSign">
+			<property name="Extends" value="PoweredNeonOpenSign" />
+			<property name="Model" value="#@modfolder:Resources/NeonSign.unity3d?ChineseRestaurantNeonPrefab" />
+			<property name="CustomIcon" value="chineseFoodSign" />
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="3,2,1" />
+			<property name="colorBowl" value="0, 255, 255" /> <!-- Cyan -->
+			<property name="colorNoodles" value="0, 255, 0" /> <!-- Lime -->
+			<property name="color1Chopstick" value="255, 255, 0" /> <!-- Yellow -->
+			<property name="color2Chopstick" value="255, 255, 0" /> <!-- Yellow -->
+			<property name="color1Steam" value="0, 128, 128" /> <!-- Teal -->
+			<property name="color2Steam" value="0, 128, 128" /> <!-- Teal -->
+			<property name="color3Steam" value="0, 128, 128" /> <!-- Teal -->
+			<property name="colorChinese" value="255, 69, 0" /> <!-- Orange Red -->
+			<property name="colorFood" value="255, 69, 0" /> <!-- Orange Red -->
+			<property name="colorOpen" value="255, 69, 0" /> <!-- Orange Red -->
+			<property name="LightObject" value="LitObjects" />
+		</block>
+		<block name="PoweredNeonOpenSign2">
+			<property name="Extends" value="PoweredNeonOpenSign" />
+			<property name="CustomIcon" value="openSign3" />
+			<property name="Model" value="#@modfolder:Resources/NeonSign.unity3d?NeonOpenSign3Prefab" />
+			<property name="DisplayType" value="blockMulti" />
+			<property name="MultiBlockDim" value="3,1,1" />
+			<property name="colorTopFrame" value="0, 0, 255" /> <!-- Blue -->
+			<property name="colorBottomFrame" value="0, 0, 255" /> <!-- Blue -->
+			<property name="colorO" value="255, 165, 0" /> <!-- Orange -->
+			<property name="colorP" value="255, 165, 0" /> <!-- Orange -->
+			<property name="colorE" value="255, 165, 0" /> <!-- Orange -->
+			<property name="colorN" value="255, 165, 0" /> <!-- Orange -->
+			<property name="LightObject" value="LitObjects" />
+		</block>	
+	</append>
+</configs>

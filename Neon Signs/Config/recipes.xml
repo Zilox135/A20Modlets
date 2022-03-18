@@ -1,0 +1,15 @@
+<Config>
+
+<append xpath="/recipes">
+
+<recipe name="PoweredNeonSignMaster" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable">
+	<ingredient name="resourceForgedIron" count="2"/>
+	<ingredient name="resourceElectricParts" count="4"/>
+	<ingredient name="resourceBrokenGlass" count="5"/>	
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="0,1,2,3,4" operation="perc_add" value=".56,.56,.56,.34,.15" tags="resourceForgedIron,resourceElectricParts"/>
+	</effect_group>
+</recipe>
+
+</append>
+</Config>

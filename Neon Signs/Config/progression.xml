@@ -1,0 +1,5 @@
+<Config>
+
+<append xpath="//perk[@name='perkAdvancedEngineering']/effect_group/passive_effect[@level='3,5']/@tags">,PoweredNeonSignMaster</append>
+
+</Config>

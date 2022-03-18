@@ -1,0 +1,14 @@
+<Config>
+
+<append xpath="//lootgroup[@name='groupElectricalDevices']">
+	<item name="PoweredNeonOpenSign" count="1,2" loot_prob_template="low"/>
+	<item name="PoweredNeonOpenSignFlashing" count="1,2" loot_prob_template="low"/>
+	<item name="PoweredNeonBowlingSignFlashing" count="1,2" loot_prob_template="low"/>
+	<item name="PoweredNeonPizzaSign" count="1,2" loot_prob_template="low"/>
+	<item name="PoweredNeonPizzaSignFlashing" count="1,2" loot_prob_template="low"/>
+	<item name="PoweredNeonGunSign" count="1,2" loot_prob_template="low"/>
+	<item name="PoweredNeonChineseFoodSign" count="1,2" loot_prob_template="low"/>
+	<item name="PoweredNeonOpenSign2" count="1,2" loot_prob_template="low"/>	
+</append>
+
+</Config>

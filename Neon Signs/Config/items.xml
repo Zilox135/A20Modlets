@@ -1,0 +1,7 @@
+<Config>
+
+<append xpath="//item[@name='generatorbankSchematic']/effect_group">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="PoweredNeonSignMaster" operation="set" value="1"/>
+</append>
+
+</Config>

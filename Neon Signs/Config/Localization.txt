@@ -1,0 +1,11 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context / Alternate Text,german,latam,french,italian,japanese,koreana,polish,brazilian,russian,turkish,schinese,tchinese,spanish
+PoweredNeonSignMaster,blocks,Block,,,Powered Neon Signs,,
+PoweredNeonOpenSign,blocks,Light,,,Powered Neon Open Sign,,
+PoweredNeonOpenSignFlashing,blocks,Light,,,Powered Neon Open Sign (Flashing),,
+PoweredNeonBowlingSignFlashing,blocks,Light,,,Powered Neon Bowling Sign (Flashing),,
+PoweredNeonPizzaSign,blocks,Light,,,Powered Neon Pizza Sign,,
+PoweredNeonPizzaSignFlashing,blocks,Light,,,Powered Neon Pizza Sign (Flashing),,
+PoweredNeonGunSign,blocks,Light,,,Powered Neon Gun Sign,,
+PoweredNeonChineseFoodSign,blocks,Light,,,Powered Neon Chinese Food Sign,,
+PoweredNeonOpenSign2,blocks,Light,,,Powered Neon Open Sign 2,,
+PoweredNeonSignMasterDesc,blocks,Light,,,Neon Signs that can be crafted and require power.,,,
