@@ -1,0 +1,18 @@
+<Zilox>
+
+<append xpath="//trader_item_group[@name='vehiclePartsT1']">
+	<item name="vehicleApacheHelicopterChassis"/>
+	<item name="vehicleApacheHelicopterAccessories"/>
+	<item name="vehicleApacheHelicopterPlaceable"/>
+</append>
+
+<append xpath="//trader_item_group[@name='rareBooks']">
+	<item name="vehicleApacheHelicopterChassisSchematic"/>
+	<item name="vehicleApacheHelicopterAccessoriesSchematic"/>
+</append>
+
+<append xpath="//trader_item_group[@name='ammo']">
+	<item name="ammoMissile" count="20,40"/>
+</append>
+
+</Zilox>
