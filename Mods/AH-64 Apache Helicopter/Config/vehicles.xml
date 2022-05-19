@@ -43,8 +43,8 @@
 			<property name="paint" value="helicopter_mesh_paint"/>
 		</property>
 		
-		<property class="hornWeaponManager">
-			<property name="class" value="HornWeaponManager,VehicleWeapon"/>
+		<property class="vehicleWeaponManager">
+			<property name="class" value="WeaponManager,VehicleWeapon"/>
 		</property>
 			
 		<property class="hornWeaponLeft">
@@ -62,7 +62,7 @@
 			<property name="emptySound" value="dryfire"/>
 			<property name="notReadySound" value="ui_denied"/>
 			<property name="notOnTargetSound" value="ui_denied"/>
-			<property name="reloadSound" value="shotgun_reload"/>
+			<property name="reloadSound" value="m136_reloadm136_reload"/>
 			<property name="particle_transform" value="HornWeapon/WeaponRoot/Rocket01"/>				
 			<property name="hornWhen" value="Anytime"/>
 		</property>
@@ -82,7 +82,7 @@
 			<property name="emptySound" value="dryfire"/>
 			<property name="notReadySound" value="ui_denied"/>
 			<property name="notOnTargetSound" value="ui_denied"/>
-			<property name="reloadSound" value="shotgun_reload"/>
+			<property name="reloadSound" value="m136_reload"/>
 			<property name="particle_transform" value="HornWeapon/WeaponRoot/Rocket02"/>
 			<property name="hornWhen" value="Anytime"/>
 		</property>			
