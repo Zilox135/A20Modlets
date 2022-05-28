@@ -47,12 +47,20 @@
       <HintPath>..\CustomParticleLoaderMultiExplosion\CustomParticleLoaderMultiExplosion.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="CustomPlayerActionManager">
+      <HintPath>..\CustomPlayerActionManager\CustomPlayerActionManager.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="InControl">
       <HintPath>..\..\7DaysToDie_Data\Managed\InControl.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="LogLibrary">
       <HintPath>..\..\7DaysToDie_Data\Managed\LogLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Mono.Cecil">
+      <HintPath>..\..\7DaysToDie_Data\Managed\Mono.Cecil.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="System" />
@@ -88,13 +96,16 @@
     <Compile Include="Harmony\Init.cs" />
     <Compile Include="Harmony\Patches.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scripts\NetPackages\NetPackageHornWeaponFire.cs" />
-    <Compile Include="Scripts\NetPackages\NetPackageHornWeaponUpdate.cs" />
-    <Compile Include="Scripts\VehicleParts\VPHornWeapon.cs" />
+    <Compile Include="Scripts\Input\PlayerActionsVehicleWeapon.cs" />
+    <Compile Include="Scripts\Input\PlayerActionVehicleWeaponData.cs" />
+    <Compile Include="Scripts\NetPackages\NetPackageParticleWeaponFire.cs" />
+    <Compile Include="Scripts\NetPackages\NetPackageParticleWeaponUpdate.cs" />
+    <Compile Include="Scripts\VehicleParts\VehicleWeaponPartBase.cs" />
+    <Compile Include="Scripts\VehicleParts\VPParticleWeapon.cs" />
     <Compile Include="Scripts\VehicleParts\VPWeaponManager.cs" />
-    <Compile Include="Scripts\VehicleParts\VPHornWeaponRotator.cs" />
-    <Compile Include="Scripts\VehicleParts\VPWeaponBase.cs" />
-    <Compile Include="Scripts\VehicleParts\VPWeaponRotatorBase.cs" />
+    <Compile Include="Scripts\VehicleParts\VPParticleWeaponRotator.cs" />
+    <Compile Include="Scripts\VehicleParts\VehicleWeaponBase.cs" />
+    <Compile Include="Scripts\VehicleParts\VehicleWeaponRotatorBase.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

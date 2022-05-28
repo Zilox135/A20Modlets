@@ -23,8 +23,6 @@
 		<property name="waterDrag_y_velScale_velMaxScale" value="1.5, .9, 1"/>
 		<property name="waterLift_y_depth_force" value="1, .5, .1"/>
 
-		<property name="hornSound" value="missile_fire"/>
-
 		<property class="engine">
 			<property name="class" value="Engine"/>
 			<property name="slot_type" value="engine"/>
@@ -47,44 +45,46 @@
 			<property name="class" value="WeaponManager,VehicleWeapon"/>
 		</property>
 			
-		<property class="hornWeaponLeft">
-			<property name="class" value="HornWeapon,VehicleWeapon"/>
-			<property name="seat" value="0"/>				
-			<property name="slot" value="0"/>								
+		<property class="WeaponLeft">
+			<property name="class" value="ParticleWeapon,VehicleWeapon"/>
+			<property name="seat" value="0"/>
+			<property name="slot" value="0"/>
 			<property name="burstCount" value="2"/>
 			<property name="burstInterval" value="0.15"/>
 			<property name="burstRepeat" value="3"/>
-			<property name="hornInterval" value="0.5"/>
+			<property name="reloadTime" value="0.5"/>
 			<property name="ammo" value="ammoMissile"/>
 			<property name="particleIndex" value="#@modfolder(AH-64 Apache Helicopter):Resources/ApacheHelicopterPrefab.unity3d?BigExplosionEffect$explosion"/>
 			<property name="explodeOnCollision" value="true"/>
 			<property name="explodeOnDeath" value="false"/>
+			<property name="fireSound" value="missile_fire"/>
 			<property name="emptySound" value="dryfire"/>
 			<property name="notReadySound" value="ui_denied"/>
 			<property name="notOnTargetSound" value="ui_denied"/>
-			<property name="reloadSound" value="m136_reloadm136_reload"/>
+			<property name="reloadSound" value="m136_reload"/>
 			<property name="particle_transform" value="HornWeapon/WeaponRoot/Rocket01"/>				
-			<property name="hornWhen" value="Anytime"/>
+			<property name="fireWhen" value="Anytime"/>
 		</property>
 
-		<property class="hornWeaponRight">
-			<property name="class" value="HornWeapon,VehicleWeapon"/>
+		<property class="WeaponRight">
+			<property name="class" value="ParticleWeapon,VehicleWeapon"/>
 			<property name="seat" value="0"/>
 			<property name="slot" value="1"/>
 			<property name="burstCount" value="2"/>
 			<property name="burstInterval" value="0.15"/>
 			<property name="burstRepeat" value="3"/>
-			<property name="hornInterval" value="0.5"/>
+			<property name="reloadTime" value="0.5"/>
 			<property name="ammo" value="ammoMissile"/>
 			<property name="particleIndex" value="#@modfolder(AH-64 Apache Helicopter):Resources/ApacheHelicopterPrefab.unity3d?BigExplosionEffect$explosion"/>
 			<property name="explodeOnCollision" value="true"/>
 			<property name="explodeOnDeath" value="false"/>
+			<property name="fireSound" value="missile_fire"/>
 			<property name="emptySound" value="dryfire"/>
 			<property name="notReadySound" value="ui_denied"/>
 			<property name="notOnTargetSound" value="ui_denied"/>
 			<property name="reloadSound" value="m136_reload"/>
 			<property name="particle_transform" value="HornWeapon/WeaponRoot/Rocket02"/>
-			<property name="hornWhen" value="Anytime"/>
+			<property name="fireWhen" value="Anytime"/>
 		</property>			
 		
 		<property class="handlebars">

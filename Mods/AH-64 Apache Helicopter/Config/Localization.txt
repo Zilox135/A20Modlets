@@ -10,4 +10,4 @@ perkGreaseMonkeyRank5LongDesc,progression,perk Int,,,"Your tinkering desire is n
 questRewardHelicopterPartsBundle,items,item,,,AH-64 Apache Helicopter Parts Bundle,,
 ammoMissile,items,Ammo,,,Helicopter Missile (Ammo),,
 ammoMissileSchematic,items,Ammo,,,Helicopter Missile Schematic,,
-ammoMissileDesc,items,Ammo,,,A missile rocket used as ammunition for the Apache Helicopter. Press X to shoot while you are inside the Apache Helicopter and the missiles are in your inventory. \nCrafts in stacks of 5.,,
+ammoMissileDesc,items,Ammo,,,A missile rocket used as ammunition for the Apache Helicopter. Press [action:local:Secondary] to shoot or use the number keys to shoot each weapon individually while you are inside the Apache Helicopter and the missiles are in your inventory. \nCrafts in stacks of 5.,,

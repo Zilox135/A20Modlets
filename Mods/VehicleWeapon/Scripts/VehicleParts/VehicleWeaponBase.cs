@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class VPWeaponBase : VehiclePart
+public class VehicleWeaponBase : VehicleWeaponPartBase
 {
     protected bool hasOperator = false;
     protected EntityPlayerLocal player = null;
     protected string notReadySound = string.Empty;
     protected string notOnTargetSound = string.Empty;
-    protected VPWeaponRotatorBase rotator = null;
+    protected string activationSound = string.Empty;
+    protected string deactivationSound = string.Empty;
+    protected VehicleWeaponRotatorBase rotator = null;
     protected int seat = 0;
     protected int slot = int.MaxValue;
     protected FiringJuncture timing;
     protected bool pressed = false;
-    protected VPWeaponBase cycleNext = null;
+    protected VehicleWeaponBase cycleNext = null;
     protected float cycleInterval = 0f;
     protected float cycleCooldown = 0f;
+    protected bool activated = true;
 
     protected enum FiringJuncture
     {
@@ -23,10 +26,13 @@ public class VPWeaponBase : VehiclePart
         OnTarget,
         FirstShot,
         FirstShotOnTarget,
-        Cycle
+        Cycle,
+        FromSlotKey,
+        FromSlotKeyOnTarget
     }
     public bool HasOperator { get => hasOperator; }
-    public VPWeaponRotatorBase Rotator { get => rotator; }
+    public bool Activated { get => activated; }
+    public VehicleWeaponRotatorBase Rotator { get => rotator; }
     public int Seat { get => seat; }
     public int Slot { get => slot; set => slot = value; }
     public bool IsCurCycle { get; set; } = false;
@@ -36,6 +42,8 @@ public class VPWeaponBase : VehiclePart
         base.SetProperties(_properties);
         _properties.ParseString("notReadySound", ref notReadySound);
         _properties.ParseString("notOnTargetSound", ref notOnTargetSound);
+        _properties.ParseString("activationSound", ref activationSound);
+        _properties.ParseString("deactivationSound", ref deactivationSound);
         string str = null;
         _properties.ParseString("fireWhen", ref str);
         if (!string.IsNullOrEmpty(str))
@@ -59,13 +67,13 @@ public class VPWeaponBase : VehiclePart
         string rotatorName = null;
         properties.ParseString("rotator", ref rotatorName);
         if (!string.IsNullOrEmpty(rotatorName))
-            rotator = vehicle.FindPart(rotatorName) as VPWeaponRotatorBase;
+            rotator = vehicle.FindPart(rotatorName) as VehicleWeaponRotatorBase;
 
         if (rotator != null)
             rotator.SetWeapon(this);
     }
 
-    public virtual void SetupWeaponConnections(in List<VPWeaponBase> weapons)
+    public virtual void SetupWeaponConnections(in List<VehicleWeaponBase> weapons)
     {
         if (timing != FiringJuncture.Cycle)
             return;
@@ -81,7 +89,6 @@ public class VPWeaponBase : VehiclePart
         properties.ParseFloat("cycleInterval", ref cycleInterval);
         if (nextIndex < slot)
             cycleNext.IsCurCycle = true;
-        Log.Out("cycle next: " + nextIndex + " is cur: " + IsCurCycle);
     }
 
     public virtual void SetCurCycle()
@@ -90,47 +97,102 @@ public class VPWeaponBase : VehiclePart
         cycleCooldown = cycleInterval;
     }
 
-    public override void Update(float _dt)
+    public override void NoPauseUpdate(float _dt)
     {
-        base.Update(_dt);
-
         if (IsCurCycle && cycleCooldown > 0)
             cycleCooldown -= _dt;
 
-        if (!hasOperator)
-        {
-            if (player && player.AttachedToEntity == vehicle.entity && vehicle.entity.FindAttachSlot(player) == seat)
-                OnPlayerEnter();
-            else
-                return;
-        }
-
-        if (vehicle.entity.FindAttachSlot(player) != seat)
-        {
-            OnPlayerDetach();
-            return;
-        }
+        if (rotator != null)
+            rotator.NoPauseUpdate(_dt);
     }
 
-    protected virtual void OnPlayerEnter()
+    public override void NoGUIUpdate(float _dt)
+    {
+        if (rotator != null)
+            rotator.NoGUIUpdate(_dt);
+    }
+
+    public virtual void NetSyncUpdate(float horRot, float verRot)
+    {
+        if (rotator != null)
+            rotator.NetSyncUpdate(horRot, verRot);
+    }
+
+    public virtual void OnPlayerEnter()
     {
         hasOperator = true;
 
-        if (rotator != null)
-            rotator.CreatePreview();
+        if (activated)
+            OnActivated();
     }
 
-    protected virtual void OnPlayerDetach()
+    public virtual void OnPlayerDetach()
     {
         hasOperator = false;
         pressed = false;
 
+        OnDeactivated();
+    }
+
+    protected virtual void OnActivated()
+    {
+        if (rotator != null)
+            rotator.CreatePreview();
+    }
+
+    protected virtual void OnDeactivated()
+    {
         if (rotator != null)
             rotator.DestroyPreview();
     }
 
-    public virtual bool DoFire(bool firstShot, bool isRelease)
+    protected void ToggleActivated()
     {
+        activated = !activated;
+        if (activated)
+        {
+            OnActivated();
+            vehicle.entity.PlayOneShot(activationSound);
+        }
+        else
+        {
+            OnDeactivated();
+            vehicle.entity.PlayOneShot(deactivationSound);
+        }
+    }
+
+    public virtual void HandleUserInput(int userData)
+    {
+        var vw_input = PlayerActionsVehicleWeapon.Instance;
+        if (slot < vw_input.ActivateActions.Count && (vw_input.ActivateActions[slot].IsPressed || vw_input.ActivateActions[slot].WasReleased))
+        {
+            if (vw_input.HoldToggleActivated.IsPressed)
+            {
+                if(vw_input.ActivateActions[slot].WasPressed)
+                    ToggleActivated();
+            }
+            else
+            {
+                bool firstShot = (userData & 1) > 0;
+                DoFireLocal(ref firstShot, vw_input.ActivateActions[slot].WasReleased, true);
+            }
+        }
+    }
+
+    public void DoFireLocal(ref bool firstShot, bool isRelease, bool fromSlot = false)
+    {
+        if(DoFire(firstShot, isRelease, fromSlot))
+        {
+            firstShot = false;
+            Fired();
+        }
+    }
+
+    protected virtual bool DoFire(bool firstShot, bool isRelease, bool fromSlot)
+    {
+        if (!activated)
+            return false;
+
         switch (timing)
         {
             case FiringJuncture.Anytime:
@@ -138,7 +200,9 @@ public class VPWeaponBase : VehiclePart
             case FiringJuncture.OnTarget:
                 if (rotator != null && !rotator.OnTarget)
                 {
-                    vehicle.entity.PlayOneShot(notOnTargetSound);
+                    if(!pressed)
+                        vehicle.entity.PlayOneShot(notOnTargetSound);
+                    pressed = true;
                     return false;
                 }
                 break;
@@ -150,20 +214,32 @@ public class VPWeaponBase : VehiclePart
                 if (!firstShot)
                     return false;
                 else if (rotator != null && !rotator.OnTarget)
-                {
-                    vehicle.entity.PlayOneShot(notOnTargetSound);
-                    return false;
-                }
+                    goto notOnTarget;
                 break;
             case FiringJuncture.Cycle:
                 if (cycleNext == null || !IsCurCycle || cycleCooldown > 0)
                     return false;
                 break;
+            case FiringJuncture.FromSlotKey:
+                if (!fromSlot)
+                    return false;
+                break;
+            case FiringJuncture.FromSlotKeyOnTarget:
+                if (!fromSlot)
+                    return false;
+                else if (rotator != null && !rotator.OnTarget)
+                    goto notOnTarget;
+                break;
         }
         return true;
+    notOnTarget:
+        if (!pressed)
+            vehicle.entity.PlayOneShot(notOnTargetSound);
+        pressed = true;
+        return false;
     }
 
-    public virtual void Fired()
+    protected virtual void Fired()
     {
         if (timing == FiringJuncture.Cycle)
         {
