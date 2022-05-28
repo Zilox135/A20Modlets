@@ -1,0 +1,12 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english,Context
+
+vehicleAPC,vehicles,vehicle,,,Military APC,,
+vehicleAPCPlaceable,vehicles,item,,,Military APC,,
+vehicleAPCChassisSchematic,vehicles,item,,,Military APC Chassis Schematic,,
+vehicleAPCAccessoriesSchematic,vehicles,item,,,Military APC Accessories Schematic,,
+vehicleAPCChassis,vehicles,item,,,Military APC Chassis,,
+vehicleAPCAccessories,vehicles,item,,,Military APC Accessories,,
+perkGreaseMonkeyRank5LongDesc,progression,perk Int,,,"Your tinkering desire is never satisfied and only a true genius could figure out how to take to the skies with scrap iron. Can craft gyrocopter parts, Military APC parts, quality 5 car batteries and apc missiles. Craft gyrocopter and apc parts 33% cheaper.",,
+ammoMissile,items,Ammo,,,APC Missile (Ammo),,
+ammoMissileSchematic,items,Ammo,,,APC Missile Schematic,,
+ammoMissileDesc,items,Ammo,,,A missile rocket used as ammunition for the Military APC. Press [action:local:Secondary] to shoot while you are inside the APC and the missiles are in your inventory. \nCrafts in stacks of 5.,,

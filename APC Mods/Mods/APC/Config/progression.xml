@@ -1,0 +1,5 @@
+<Zilox>
+	
+	<append xpath="//perk[@name='perkGreaseMonkey']/effect_group/passive_effect[@level='5']/@tags">,vehicleAPCChassis,vehicleAPCAccessories,ammoMissile</append>
+	
+</Zilox>

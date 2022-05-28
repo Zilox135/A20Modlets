@@ -1,0 +1,17 @@
+<Zilox>
+
+<append xpath="/Sounds">
+
+<SoundDataNode name="explosion_missile"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="4" noise="100" time="2" heat_map_strength="0.2" heat_map_time="90"/>
+	<AudioClip ClipName="#@modfolder:Resources/APCTank_Z.unity3d?explosion_distant"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.01"/> 
+</SoundDataNode>
+
+<SoundDataNode name="missile_reload"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<AudioClip ClipName="#@modfolder:Resources/APCTank_Z.unity3d?missile_reload"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> 
+</SoundDataNode>
+
+</append>
+</Zilox>
