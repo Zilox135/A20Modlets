@@ -1,7 +1,0 @@
-<Zilox>
-
-<append xpath="//quest[@id='quest_tier5complete']">
-	<reward type="LootItem" id="groupQuestHelicopterParts" ischosen="true" value="6"/>
-</append>
-
-</Zilox>
